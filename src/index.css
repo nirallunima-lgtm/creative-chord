@@ -2,53 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Vibrant music-themed design system for video creators */
+/* Vibrant music-themed design system inspired by modern music platforms */
 
 @layer base {
   :root {
-    /* Dark music theme */
-    --background: 240 10% 3.9%;
+    /* Rich gradient background instead of solid black */
+    --background: 220 25% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 6%;
+    --card: 220 20% 12%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 240 10% 6%;
+    --popover: 220 20% 12%;
     --popover-foreground: 0 0% 95%;
 
-    /* Music brand colors - purple/blue gradient theme */
-    --primary: 270 91% 65%;
+    /* Vibrant music brand colors - multi-color theme */
+    --primary: 280 100% 70%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 280 100% 70%;
+    --primary-glow: 285 100% 75%;
 
-    --secondary: 240 10% 12%;
+    --secondary: 220 15% 15%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 240 10% 10%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 70%;
 
-    --accent: 270 91% 65%;
+    --accent: 200 100% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 10% 18%;
-    --input: 240 10% 12%;
-    --ring: 270 91% 65%;
+    --border: 220 15% 25%;
+    --input: 220 15% 15%;
+    --ring: 280 100% 70%;
 
-    /* Music-specific design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(270, 91%, 65%), hsl(280, 100%, 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(240, 10%, 6%), hsl(240, 10%, 12%));
-    --gradient-hero: linear-gradient(135deg, hsl(240, 10%, 3.9%), hsl(240, 10%, 8%));
-    --gradient-card: linear-gradient(135deg, hsl(240, 10%, 6%), hsl(240, 10%, 9%));
+    /* Enhanced music-specific design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(280, 100%, 70%), hsl(200, 100%, 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220, 20%, 12%), hsl(220, 15%, 18%));
+    --gradient-hero: linear-gradient(135deg, hsl(220, 25%, 8%) 0%, hsl(280, 50%, 15%) 50%, hsl(200, 40%, 15%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220, 20%, 12%), hsl(220, 15%, 16%));
+    --gradient-vibrant: linear-gradient(45deg, hsl(280, 100%, 70%), hsl(200, 100%, 60%), hsl(120, 70%, 60%));
     
-    --shadow-glow: 0 0 40px hsl(270, 91%, 65% / 0.3);
-    --shadow-card: 0 10px 40px hsl(240, 10%, 3.9% / 0.5);
-    --shadow-hover: 0 20px 60px hsl(270, 91%, 65% / 0.2);
+    /* Color palette for mood cards */
+    --color-chill: 180 70% 50%;
+    --color-cinematic: 30 80% 60%;
+    --color-energetic: 320 90% 65%;
+    --color-emotional: 350 70% 60%;
+    --color-lofi: 45 60% 55%;
+    --color-travel: 210 80% 65%;
+    --color-focus: 260 70% 60%;
+    --color-uplifting: 60 80% 60%;
+    --color-mysterious: 270 60% 50%;
+    --color-romantic: 340 75% 65%;
+    --color-adventure: 25 70% 55%;
+    --color-peaceful: 160 60% 55%;
     
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --shadow-glow: 0 0 60px hsl(280, 100%, 70% / 0.4);
+    --shadow-card: 0 20px 60px hsl(220, 25%, 8% / 0.6);
+    --shadow-hover: 0 30px 80px hsl(280, 100%, 70% / 0.3);
+    --shadow-vibrant: 0 0 100px hsl(280, 100%, 70% / 0.2), 0 0 200px hsl(200, 100%, 60% / 0.1);
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --radius: 1rem;
 

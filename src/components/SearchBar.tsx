@@ -27,23 +27,23 @@ export const SearchBar = ({ onSearch, placeholder = "Describe your perfect track
   ];
 
   return (
-    <div className="w-full max-w-2xl mx-auto space-y-4">
+    <div className="w-full max-w-2xl mx-auto space-y-6">
       <form onSubmit={handleSubmit} className="relative group">
-        <div className="absolute inset-0 bg-gradient-primary rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm" />
-        <div className="relative flex items-center">
-          <Search className="absolute left-4 h-5 w-5 text-muted-foreground" />
+        <div className="absolute inset-0 bg-gradient-vibrant rounded-xl opacity-0 group-hover:opacity-30 group-focus-within:opacity-40 transition-all duration-500 blur-md" />
+        <div className="relative flex items-center backdrop-blur-sm">
+          <Search className="absolute left-6 h-6 w-6 text-white/60 group-focus-within:text-primary transition-colors duration-300" />
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={placeholder}
-            className="pl-12 pr-24 py-4 text-lg bg-card border-border focus:border-primary/50 focus:ring-primary/30 transition-all duration-300"
+            className="pl-16 pr-32 py-6 text-lg bg-card/80 backdrop-blur-md border-border/50 focus:border-primary/60 focus:ring-primary/40 transition-all duration-500 rounded-xl text-white placeholder:text-white/50"
           />
           <Button
             type="submit"
             disabled={!query.trim()}
-            className="absolute right-2 bg-gradient-primary hover:shadow-glow transition-all duration-300 disabled:opacity-50"
+            className="absolute right-3 bg-gradient-primary hover:shadow-vibrant transition-all duration-500 disabled:opacity-50 px-6 py-3 rounded-lg font-semibold"
           >
-            <Sparkles className="h-4 w-4 mr-2" />
+            <Sparkles className="h-5 w-5 mr-2" />
             Find Music
           </Button>
         </div>

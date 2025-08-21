@@ -50,7 +50,13 @@ const Index = () => {
   }, [searchQuery, selectedMoods]);
 
   return (
-    <div className="min-h-screen bg-gradient-hero">
+    <div className="min-h-screen bg-gradient-hero relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-40 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div 
@@ -61,54 +67,64 @@ const Index = () => {
             backgroundPosition: 'center',
           }}
         />
-        <div className="relative container mx-auto px-4 py-20 text-center">
-          <div className="max-w-4xl mx-auto space-y-8">
+        <div className="relative container mx-auto px-4 py-24 text-center z-10">
+          <div className="max-w-5xl mx-auto space-y-12">
             {/* Logo/Brand */}
-            <div className="flex items-center justify-center gap-3 mb-8">
-              <div className="p-3 bg-gradient-primary rounded-xl shadow-glow">
-                <Music className="h-8 w-8 text-white" />
+            <div className="flex items-center justify-center gap-4 mb-12 animate-fade-in">
+              <div className="p-4 bg-gradient-primary rounded-2xl shadow-vibrant animate-glow-pulse">
+                <Music className="h-10 w-10 text-white" />
               </div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-bold bg-gradient-to-r from-white via-primary-glow to-accent bg-clip-text text-transparent">
                 TuneScript
               </h1>
             </div>
 
             {/* Hero Text */}
-            <div className="space-y-6">
-              <h2 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-                Find the perfect music
+            <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <h2 className="text-6xl md:text-7xl font-bold leading-tight">
+                <span className="text-white">Find the </span>
+                <span className="bg-gradient-vibrant bg-clip-text text-transparent animate-glow-pulse">
+                  perfect music
+                </span>
                 <br />
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  for your story
+                <span className="text-white/90">for your </span>
+                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                  story
                 </span>
               </h2>
-              <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Describe the mood, scene, or vibe in natural language and discover 
-                the ideal background music for your video projects.
+                the ideal background music for your video projects instantly.
               </p>
             </div>
 
             {/* Search Bar */}
-            <div className="pt-8">
+            <div className="pt-12 animate-scale-in" style={{ animationDelay: '0.4s' }}>
               <SearchBar 
                 onSearch={handleSearch}
-                placeholder="Soft lo-fi for a rainy day vlog..."
+                placeholder="✨ soft lo-fi for a rainy day vlog..."
               />
             </div>
 
-            {/* Stats */}
-            <div className="flex items-center justify-center gap-8 pt-8 text-white/60">
-              <div className="flex items-center gap-2">
-                <Headphones className="h-5 w-5" />
-                <span>10,000+ Tracks</span>
+            {/* Enhanced Stats */}
+            <div className="flex items-center justify-center gap-12 pt-12 text-white/70 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex items-center gap-3 group cursor-pointer">
+                <div className="p-3 bg-white/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
+                  <Headphones className="h-6 w-6" />
+                </div>
+                <span className="text-lg font-medium">10,000+ Tracks</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Heart className="h-5 w-5" />
-                <span>Loved by Creators</span>
+              <div className="flex items-center gap-3 group cursor-pointer">
+                <div className="p-3 bg-white/10 rounded-full group-hover:bg-accent/20 transition-colors duration-300">
+                  <Heart className="h-6 w-6" />
+                </div>
+                <span className="text-lg font-medium">Loved by Creators</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Sparkles className="h-5 w-5" />
-                <span>AI-Powered</span>
+              <div className="flex items-center gap-3 group cursor-pointer">
+                <div className="p-3 bg-white/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
+                  <Sparkles className="h-6 w-6" />
+                </div>
+                <span className="text-lg font-medium">AI-Powered</span>
               </div>
             </div>
           </div>
